@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
+    <title>async project</title>
+</head>
+<body>
+    <h1>chai aur code</h1>
+    <button id="stop">Stop</button>
+    
+=======
+    <title>Document</title>
+</head>
+<body>
+    <h1>chai and code</h1>
+    <button id="stop">stop</button>
+>>>>>>> 3551de5d6a82ed3547769446f7441ce972847e3c
+</body>
+<script>
+    const sayankit = function(){
+        console.log("ankit");
+    }
+<<<<<<< HEAD
+    setTimeout(sayankit,2000) //execute --> sayankit(),refernce hota jb hum sayankit likhnege
+=======
+    const changetext = function(){
+        document.querySelector('h1').innerHTML = "kya baat h bawaa"
+    }
+    const changeme = setTimeout(changetext,2000)
+    // clearTimeout(changeme)
+    document.querySelector('#stop').addEventListener('click',function(){
+        console.log("stopped")
+    })
+>>>>>>> 3551de5d6a82ed3547769446f7441ce972847e3c
+</script>
+</html>

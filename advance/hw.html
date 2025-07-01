@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Follower Count</title>
+</head>
+<body style="background-color: #181717;">
+    <button id="followerButton">Get Follower Count</button>
+    <div id="followerData" style="display: none;">
+        <p id="followerCount"></p>
+        <img id="avatar" src="" alt="Follower Avatar">
+    </div>
+
+    <script>
+        document.getElementById("followerButton").addEventListener("click", function() {
+            const requesturl = 'https://api.github.com/users/{username}'; // Replace {username} with your GitHub username
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', requesturl);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    const data = JSON.parse(this.responseText);
+                    const followerCount = data.followers;
+                    const avatarUrl = data.avatar_url;
+                    document.getElementById("followerCount").textContent = "Followers: " + followerCount;
+                    document.getElementById("avatar").src = avatarUrl;
+                    document.getElementById("followerData").style.display = "block";
+                }
+            };
+            xhr.send();
+        });
+    </script>
+</body>
+</html>
