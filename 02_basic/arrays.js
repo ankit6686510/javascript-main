@@ -1,9 +1,9 @@
 //Array
-const myarr = [0,1,2,4,5,3,6]
-const myheroes = ["shaktiman","naagraj","hero"]
+const myarr = [0, 1, 2, 4, 5, 3, 6];
+const myheroes = ["shaktiman", "naagraj", "hero"];
 // console.log(myheroes)
 
-const myarr2 =  new Array(10,20,30)
+const myarr2 = new Array(10, 20, 30);
 // console.log(myarr2)
 
 //Array method
@@ -33,11 +33,10 @@ const myarr2 =  new Array(10,20,30)
 // console.log(myn1);
 // console.log("B",myarr);
 
-const myn2 = myarr.splice(1,3)//give all including 1&3
-console.log(myn2)
-console.log("c",myarr);//remove the element from 1 to 3 and at begining it will add c
+const myn2 = myarr.splice(1, 3); //give all including 1&3
 console.log(myn2);
-
+console.log("c", myarr); //remove the element from 1 to 3 and at begining it will add c
+console.log(myn2);
 
 /*
 In JavaScript, slice and splice are both array methods, but they serve different purposes.
