@@ -15,3 +15,11 @@
 //     console.log('person' , i);
 // }
 // console.log("person 400001");
+
+async function fetchdata(){
+    let response  = await fetch('https://jsonplaceholder.typicode.com/users');
+    console.log(await response.json());
+
+}
+fetchdata();
+console.log("ankit");
